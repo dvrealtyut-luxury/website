@@ -111,6 +111,8 @@ home = f"""<section class="hero">
 
 <div class="marquee" aria-hidden="true"><div class="marquee__track">{marquee_items}{marquee_items}{marquee_items}{marquee_items}</div></div>
 
+{featured_section(limit=2, sand=True)}
+
 <section class="section">
   <div class="wrap">
     <div class="split">
@@ -197,8 +199,6 @@ home = f"""<section class="hero">
     </div>
   </div>
 </section>
-
-{featured_section(limit=2, sand=False)}
 
 <section class="section section--sand">
   <div class="wrap">
@@ -302,9 +302,9 @@ about = f"""<section class="page-hero">
 </section>
 
 <section class="triptych" aria-label="Photos of Danielle">
-  <div class="triptych__item mask">{img("danielle-kitchen", "Danielle Vaughns standing at a kitchen island", sizes="(max-width: 900px) 100vw, 33vw")}</div>
-  <div class="triptych__item mask">{img("danielle-sofa-2", "Danielle Vaughns seated on a leather sofa in a sunlit living room", sizes="(max-width: 900px) 100vw, 33vw", pos="70% 50%")}</div>
-  <div class="triptych__item mask">{img("danielle-living-room", "Danielle Vaughns walking through a living room with a marble fireplace", sizes="(max-width: 900px) 100vw, 33vw", pos="50% 25%")}</div>
+  <div class="triptych__item mask">{img("danielle-kitchen", "Danielle Vaughns standing at a kitchen island", sizes="(max-width: 900px) 33vw, 380px", pos="50% 8%")}</div>
+  <div class="triptych__item mask">{img("danielle-sofa-2", "Danielle Vaughns seated on a leather sofa in a sunlit living room", sizes="(max-width: 900px) 33vw, 380px", pos="70% 50%")}</div>
+  <div class="triptych__item mask">{img("danielle-living-room", "Danielle Vaughns walking through a living room with a marble fireplace", sizes="(max-width: 900px) 33vw, 380px", pos="50% 25%")}</div>
 </section>
 
 <section class="section section--dark">
