@@ -4,6 +4,7 @@ EMAIL = "dvrealtyut@gmail.com"
 KW_SEARCH = "https://daniellevaughns.kw.com"
 CALENDLY = "https://calendly.com/dvrealtyut/30min"
 BROKERAGE = "KW Utah Realtors Keller Williams"
+LUXURY = "KW Utah Realtors Luxury"
 
 ARROW = '<svg class="arrow" viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" fill="none" stroke="currentColor"/></svg>'
 
@@ -123,13 +124,13 @@ def footer():
           <li><a href="tel:{PHONE_TEL}">{PHONE}</a></li>
           <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
           <li>Salt Lake City, Utah</li>
-          <li>{BROKERAGE}</li>
+          <li>{BROKERAGE}<br>{LUXURY}</li>
         </ul>
       </div>
     </div>
     <div class="footer-big" aria-hidden="true">Danielle Vaughns</div>
     <div class="footer-bottom">
-      <span>© <span data-year>2026</span> DV Realty · Danielle Vaughns, Licensed Utah REALTOR®. Brokered by {BROKERAGE}. All rights reserved.</span>
+      <span>© <span data-year>2026</span> DV Realty · Danielle Vaughns, Licensed Utah REALTOR®. Brokered by {BROKERAGE} · {LUXURY}. All rights reserved.</span>
       <span class="eho">{EHO} Equal Housing Opportunity</span>
     </div>
   </div>

@@ -126,7 +126,7 @@ home = f"""<section class="hero">
         <p class="lede reveal reveal-d2">With deep roots in Utah and years of experience guiding families through relocation, Danielle brings local expertise and genuine care to every client relationship. Whether you're moving across the country or across the valley, she makes the journey feel effortless.</p>
         <ul class="checklist reveal reveal-d3">
           <li>Licensed Utah REALTOR®</li>
-          <li>KW Utah Realtors Luxury Market Center Liaison</li>
+          <li>{LUXURY} · Luxury Market Center Liaison</li>
           <li>Member, Park City Board of Realtors®</li>
           <li>Medical Professional Relocation Specialist</li>
         </ul>
@@ -269,7 +269,7 @@ about = f"""<section class="page-hero">
       <div class="cred reveal">{ICON['badge']}<strong>Licensed Utah REALTOR®</strong></div>
       <div class="cred reveal reveal-d1">{ICON['star']}<strong>KW Utah #8 Individual Producer</strong></div>
       <div class="cred reveal reveal-d2">{ICON['cross']}<strong>Medical Professional Relocation Specialist</strong></div>
-      <div class="cred reveal">{ICON['diamond']}<strong>KW Utah Realtors Luxury Market Center Liaison</strong></div>
+      <div class="cred reveal">{ICON['diamond']}<strong>{LUXURY} Agent &amp; Luxury Market Center Liaison</strong></div>
       <div class="cred reveal reveal-d1">{ICON['mountain']}<strong>Member, Park City Board of Realtors®</strong></div>
       <div class="cred reveal reveal-d2">{ICON['key']}<strong>Buyer &amp; Seller Representation</strong></div>
     </div>
@@ -573,7 +573,7 @@ contact = f"""<section class="page-hero">
           <div><dt>Call or text</dt><dd><a href="tel:{PHONE_TEL}">{PHONE}</a></dd></div>
           <div><dt>Email</dt><dd><a href="mailto:{EMAIL}">{EMAIL}</a></dd></div>
           <div><dt>Based in</dt><dd>Salt Lake City, Utah<br>Serving all of Utah</dd></div>
-          <div><dt>Brokerage</dt><dd>{BROKERAGE}</dd></div>
+          <div><dt>Brokerage</dt><dd>{BROKERAGE}<br>{LUXURY}</dd></div>
         </dl>
       </div>
 
