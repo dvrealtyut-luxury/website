@@ -592,3 +592,25 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .frame__tag strong { font-size: 21px; }
   .footer-big { white-space: normal; }
 }
+
+/* ---------- Scheduler (Calendly) ---------- */
+.scheduler { background: #fff; border: 1px solid var(--line); padding: clamp(28px, 4vw, 56px) clamp(16px, 3vw, 48px); }
+.scheduler > .eyebrow, .scheduler > .h2, .scheduler > p { padding: 0 clamp(4px, 1vw, 8px); }
+.scheduler .h2 { margin-bottom: 8px; }
+.scheduler > p { color: var(--muted); }
+.calendly-inline-widget { min-width: 300px; height: 720px; margin-top: 16px; background: var(--ivory); }
+.scheduler__alt { margin: 20px 0 0; font-size: 14px; }
+.scheduler__alt a { color: var(--plum-2); border-bottom: 1px solid var(--gold); }
+@media (max-width: 640px) {
+  .scheduler { padding: 28px 0 24px; border-left: 0; border-right: 0; margin: 0 calc(var(--gutter) * -1); }
+  .scheduler > .eyebrow, .scheduler > .h2, .scheduler > p { padding: 0 var(--gutter); }
+  .calendly-inline-widget { height: 900px; }
+}
+
+/* ---------- Listing card extras & anchor offset ---------- */
+[id] { scroll-margin-top: 96px; }
+.listing__desc { color: var(--muted); font-size: 15.5px; margin-bottom: 28px; }
+.listing__specs span + span::before { content: "·"; margin-right: 28px; color: var(--gold); }
+.listing__specs span + span { margin-left: -14px; }
+.listing__cta { margin-top: 28px; align-self: flex-start; }
+.listing__media { display: block; }

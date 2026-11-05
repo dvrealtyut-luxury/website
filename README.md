@@ -22,18 +22,30 @@ then visit http://localhost:8000.
 | `contact.html` | Contact & consultation request form |
 
 Shared styles live in `assets/css/style.css` and shared behavior in `assets/js/main.js`.
-The header and footer are repeated in each page — update all six when changing them.
+
+The HTML pages are generated from `build/` so the header, footer and contact details stay identical everywhere:
+
+- `build/shared.py` — phone, email, brokerage, Calendly and KW links, header, footer
+- `build/pages.py` — page content
+- `build/listings.py` — featured listings
+
+After editing any of these, regenerate the pages from the repo root:
+
+```bash
+python3 build/pages.py
+```
 
 ## Before going live — checklist
 
 - [x] **Phone number** — (801) 678-0444.
-- [ ] **Email** — confirm `danielle@daniellevaughns.com` is a working inbox.
+- [x] **Email** — dvrealtyut@gmail.com.
 - [x] **Brokerage name** — KW Utah Realtors Keller Williams (footer and contact page).
 - [ ] **Contact form** — by default it opens the visitor's email app. To receive submissions directly, create a free form at a service such as Formspree and add `data-endpoint="https://formspree.io/f/XXXX"` to the `<form>` in `contact.html`.
 - [ ] **Social links** — add real profile URLs (none are included yet).
 - [ ] **Testimonials** — add real client reviews (with permission) when available.
-- [ ] **Scheduling** — embed Danielle's Calendly on the contact page.
-- [ ] **Listings** — add real listings, or connect an IDX/MLS provider.
+- [x] **Scheduling** — Calendly (calendly.com/dvrealtyut/30min) embedded on the contact page (`#schedule`).
+- [x] **Listings search** — "Search All Utah Homes" links to daniellevaughns.kw.com.
+- [ ] **Featured listings** — add Danielle's listings in `build/listings.py`.
 
 ## Hosting
 
