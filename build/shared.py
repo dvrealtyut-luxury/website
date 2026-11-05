@@ -3,6 +3,8 @@ PHONE_TEL = "+18016780444"
 EMAIL = "dvrealtyut@gmail.com"
 KW_SEARCH = "https://daniellevaughns.kw.com"
 CALENDLY = "https://calendly.com/dvrealtyut/30min"
+# Update when the custom domain is connected (used for social share previews)
+SITE_URL = "https://dv-realty.vercel.app"
 BROKERAGE = "KW Utah Realtors Keller Williams"
 LUXURY = "KW Utah Realtors Luxury"
 
@@ -149,7 +151,10 @@ def page(filename, title, description, body, light_header=False):
 <meta property="og:type" content="website">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
-<meta property="og:image" content="assets/img/danielle-living-room-1400.webp">
+<meta property="og:image" content="{SITE_URL}/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/img/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">

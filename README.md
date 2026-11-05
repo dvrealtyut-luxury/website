@@ -47,6 +47,12 @@ python3 build/pages.py
 - [x] **Listings search** — "Search All Utah Homes" links to daniellevaughns.kw.com.
 - [ ] **Featured listings** — add Danielle's listings in `build/listings.py`.
 
+## Photos
+
+Photos of Danielle live in `assets/img/` as WebP at two widths (800 and 1400px). Originals (DSC_*.jpg, ~20 MB each) are kept in Google Drive, not in this repo — they're too large to serve on a website. To add a new photo, ask Claude to optimize it, or export it as WebP at 800px and 1400px wide.
+
+`og-image.jpg` (1200×630) is the preview image shown when the site is shared on social media or in texts.
+
 ## Hosting
 
 Hosted on Vercel (config in `vercel.json`: clean URLs such as `/about`, asset caching). Every push to `main` redeploys the live site automatically; other branches get preview links.
