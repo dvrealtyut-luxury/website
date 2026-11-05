@@ -26,14 +26,15 @@ The header and footer are repeated in each page — update all six when changing
 
 ## Before going live — checklist
 
-- [ ] **Phone number** — `(801) 555-0100` carried over from the Airo draft is a placeholder (555 numbers are not real). Search/replace `555-0100` and `+18015550100`.
+- [x] **Phone number** — (801) 678-0444.
 - [ ] **Email** — confirm `danielle@daniellevaughns.com` is a working inbox.
-- [ ] **Brokerage name** — Utah advertising rules require the brokerage name on ads; add it to the footer in each page.
+- [x] **Brokerage name** — KW Utah Realtors Keller Williams (footer and contact page).
 - [ ] **Contact form** — by default it opens the visitor's email app. To receive submissions directly, create a free form at a service such as Formspree and add `data-endpoint="https://formspree.io/f/XXXX"` to the `<form>` in `contact.html`.
 - [ ] **Social links** — add real profile URLs (none are included yet).
 - [ ] **Testimonials** — add real client reviews (with permission) when available.
+- [ ] **Scheduling** — embed Danielle's Calendly on the contact page.
 - [ ] **Listings** — add real listings, or connect an IDX/MLS provider.
 
 ## Hosting
 
-Hosted on Vercel (config in `vercel.json`: clean URLs such as `/about`, asset caching). Every push to the production branch redeploys automatically.
+Hosted on Vercel (config in `vercel.json`: clean URLs such as `/about`, asset caching). Every push to `main` redeploys the live site automatically; other branches get preview links.
