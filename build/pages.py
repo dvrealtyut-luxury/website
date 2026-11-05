@@ -14,8 +14,6 @@ def img(name, alt, sizes="(max-width: 900px) 100vw, 50vw", eager=False, w=1400, 
             f'sizes="{sizes}" width="{w}" height="{h}" alt="{alt}" {load} decoding="async"{style}>')
 
 
-PORTRAIT = ('<img src="assets/img/danielle-portrait-600.webp" width="600" height="800" loading="lazy" decoding="async" '
-            'alt="Danielle Vaughns, Utah REALTOR®, smiling in front of a marble fireplace">')
 
 COMMUNITIES = [
     ("Salt Lake City", "The Avenues · Sugar House · East Bench",
@@ -101,7 +99,7 @@ home = f"""<section class="hero">
     <div class="scroll-cue fade-up"><i></i>Scroll</div>
   </div>
   <div class="hero__media">
-    <div class="hero__img">{img("danielle-living-room", "Danielle Vaughns in a light-filled Utah living room with a marble fireplace", eager=True, pos="50% 28%")}</div>
+    <div class="hero__img">{img("danielle-kitchen-walk", "Danielle Vaughns walking through a bright, modern Utah kitchen", eager=True, pos="50% 30%")}</div>
     <div class="hero__badge" aria-hidden="true">
       <svg viewBox="0 0 168 168"><defs><path id="circ" d="M84 84m-64 0a64 64 0 1 1 128 0a64 64 0 1 1-128 0"/></defs>
         <text><textPath href="#circ">Utah Relocation Specialist · DV Realty · </textPath></text></svg>
@@ -117,7 +115,7 @@ home = f"""<section class="hero">
   <div class="wrap">
     <div class="split">
       <div class="frame reveal">
-        <div class="frame__img mask">{PORTRAIT}</div>
+        <div class="frame__img mask">{img("danielle-smile", "Danielle Vaughns smiling, resting her chin on her hand at a kitchen table", sizes="(max-width: 900px) 100vw, 45vw")}</div>
         <div class="frame__tag"><small>KW Utah</small><strong>#8 Individual Producer</strong></div>
       </div>
       <div>
@@ -169,7 +167,7 @@ home = f"""<section class="hero">
 
 <section class="feature on-dark" id="medical">
   <div class="feature__media mask">
-    {img("danielle-desk", "Danielle Vaughns seated at a writing desk in a bright, modern home", sizes="(max-width: 900px) 100vw, 45vw", pos="50% 30%")}
+    {img("danielle-desk-blazer", "Danielle Vaughns at her desk in a navy blazer, looking out the window", sizes="(max-width: 900px) 100vw, 45vw", pos="50% 35%")}
   </div>
   <div class="feature__copy">
     <span class="eyebrow reveal">For medical professionals</span>
@@ -240,7 +238,7 @@ about = f"""<section class="page-hero">
   <div class="wrap">
     <div class="split split--reverse">
       <div class="frame frame--left reveal">
-        <div class="frame__img mask">{img("danielle-desk", "Danielle Vaughns seated at a desk, smiling", sizes="(max-width: 900px) 100vw, 45vw")}</div>
+        <div class="frame__img mask">{img("danielle-blazer", "Danielle Vaughns in a navy blazer, smiling in a modern kitchen", sizes="(max-width: 900px) 100vw, 45vw", pos="50% 25%")}</div>
         <div class="frame__tag"><small>Serving</small><strong>All of Utah</strong></div>
       </div>
       <div>
@@ -280,7 +278,7 @@ about = f"""<section class="page-hero">
   <div class="wrap">
     <div class="split">
       <div class="frame reveal">
-        <div class="frame__img mask">{PORTRAIT}</div>
+        <div class="frame__img mask">{img("danielle-book", "Danielle Vaughns holding a book beside a round mirror in a bright home", sizes="(max-width: 900px) 100vw, 45vw")}</div>
         <div class="frame__tag"><small>Experience</small><strong>Utah Expert</strong></div>
       </div>
       <div>
@@ -301,6 +299,12 @@ about = f"""<section class="page-hero">
       </div>
     </div>
   </div>
+</section>
+
+<section class="triptych" aria-label="Photos of Danielle">
+  <div class="triptych__item mask">{img("danielle-kitchen", "Danielle Vaughns standing at a kitchen island", sizes="(max-width: 900px) 100vw, 33vw")}</div>
+  <div class="triptych__item mask">{img("danielle-sofa-2", "Danielle Vaughns seated on a leather sofa in a sunlit living room", sizes="(max-width: 900px) 100vw, 33vw", pos="70% 50%")}</div>
+  <div class="triptych__item mask">{img("danielle-living-room", "Danielle Vaughns walking through a living room with a marble fireplace", sizes="(max-width: 900px) 100vw, 33vw", pos="50% 25%")}</div>
 </section>
 
 <section class="section section--dark">
@@ -364,7 +368,7 @@ relocate = f"""<section class="page-hero">
 
 <section class="feature on-dark" id="medical">
   <div class="feature__media mask">
-    {img("danielle-living-room", "Danielle Vaughns walking through a bright living room", sizes="(max-width: 900px) 100vw, 45vw", pos="50% 30%")}
+    {img("danielle-sofa", "Danielle Vaughns relaxing on a tufted leather sofa", sizes="(max-width: 900px) 100vw, 45vw", pos="62% 50%")}
   </div>
   <div class="feature__copy">
     <span class="eyebrow reveal">Medical professional relocation</span>
@@ -567,7 +571,7 @@ contact = f"""<section class="page-hero">
     <div class="contact-grid">
       <div class="contact-info">
         <div class="frame frame--left reveal" style="max-width:360px">
-          <div class="frame__img mask">{PORTRAIT}</div>
+          <div class="frame__img mask">{img("danielle-smile-2", "Danielle Vaughns smiling warmly at a kitchen table", sizes="(max-width: 900px) 100vw, 360px")}</div>
         </div>
         <dl class="reveal reveal-d1">
           <div><dt>Call or text</dt><dd><a href="tel:{PHONE_TEL}">{PHONE}</a></dd></div>
