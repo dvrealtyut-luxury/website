@@ -32,7 +32,7 @@ LISTINGS = [
         "sqft": "3,486",
         "image": "assets/img/listings/7450-s-enchanted-hills-dr.webp",
         "description": "A beautifully updated home in a secluded Cottonwood Heights neighborhood, with vaulted ceilings, two fireplaces, newly refinished hardwood floors and a remodeled primary bath. Outside, an oversized deck with unobstructed valley views overlooks a pool and a dedicated garden area.",
-        "link": "",
+        "link": "https://www.zillow.com/homedetails/7450-S-Enchanted-Hills-Dr-Cottonwood-Heights-UT-84121/12875572_zpid/",
     },
     {
         "status": "For Sale",
@@ -44,6 +44,6 @@ LISTINGS = [
         "sqft": "2,914",
         "image": "assets/img/listings/1528-e-harvard-ave.webp",
         "description": "A fully renovated 1915 bungalow on one of Yalecrest's most distinguished tree-lined streets, with a Thermador kitchen, waterfall quartz countertops and a light-filled main-floor primary suite. Minutes to downtown SLC, the University of Utah, 15th & 15th and 9th & 9th.",
-        "link": "",
+        "link": "https://daniellevaughns.kw.com/property/1528-E-HARVARD-AVE-Salt-Lake-City-UT-84105/2137842695522850",
     },
 ]
