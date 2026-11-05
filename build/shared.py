@@ -8,6 +8,14 @@ SITE_URL = "https://dv-realty.vercel.app"
 BROKERAGE = "KW Utah Realtors Keller Williams"
 LUXURY = "KW Utah Realtors Luxury"
 
+# Short fingerprint of a file, added to its URL so browsers fetch the new copy
+# whenever it changes (instead of reusing an old saved one).
+import hashlib as _hashlib, os as _os
+_ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+def asset_version(path):
+    with open(_os.path.join(_ROOT, path), "rb") as f:
+        return _hashlib.md5(f.read()).hexdigest()[:8]
+
 ARROW = '<svg class="arrow" viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" fill="none" stroke="currentColor"/></svg>'
 
 NAV = [
@@ -160,7 +168,7 @@ def page(filename, title, description, body, light_header=False):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v={asset_version('assets/css/style.css')}">
 </head>
 <body>
 {header(filename, light_header)}
@@ -168,7 +176,7 @@ def page(filename, title, description, body, light_header=False):
 {body}
 </main>
 {footer()}
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.js?v={asset_version('assets/js/main.js')}" defer></script>
 </body>
 </html>
 """
