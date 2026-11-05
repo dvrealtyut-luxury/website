@@ -36,4 +36,4 @@ The header and footer are repeated in each page — update all six when changing
 
 ## Hosting
 
-Any static host works. Free options: GitHub Pages (Settings → Pages → deploy from branch), Netlify or Vercel. Point the custom domain's DNS at the host.
+Hosted on Vercel (config in `vercel.json`: clean URLs such as `/about`, asset caching). Every push to the production branch redeploys automatically.
