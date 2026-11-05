@@ -585,13 +585,12 @@ contact = f"""<section class="page-hero">
         <span class="eyebrow">Free 30-minute consultation</span>
         <h2 class="h2">Book a time</h2>
         <p>Choose a time that works for you. Danielle will call to talk through your move — timeline, neighborhoods, financing and next steps.</p>
-        <div class="calendly-inline-widget" data-url="{CALENDLY}?hide_gdpr_banner=1&amp;background_color=ffffff&amp;text_color=1b1222&amp;primary_color=b8924f"></div>
+        <iframe class="scheduler__frame" src="{CALENDLY}?embed_type=Inline&amp;embed_domain=dv-realty.vercel.app&amp;hide_gdpr_banner=1&amp;background_color=ffffff&amp;text_color=1b1222&amp;primary_color=b8924f" title="Book a free consultation with Danielle Vaughns" loading="lazy"></iframe>
         <p class="scheduler__alt">Calendar not loading? <a href="{CALENDLY}" target="_blank" rel="noopener">Open the scheduler in a new tab ↗</a></p>
       </div>
     </div>
   </div>
 </section>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 <section class="section section--sand" id="message">
   <div class="wrap wrap--narrow">

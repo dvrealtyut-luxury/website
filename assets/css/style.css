@@ -518,8 +518,8 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .mask { overflow: hidden; }
 .mask > img, .mask > picture { transform: scale(1.12); transition: transform 1.8s var(--ease); }
 .mask.is-in > img, .mask.is-in > picture { transform: scale(1); }
-.line-reveal { display: block; overflow: hidden; }
-.line-reveal > span { display: block; transform: translateY(105%); transition: transform 1.2s var(--ease); }
+.line-reveal { display: block; overflow: hidden; padding-bottom: .16em; margin-bottom: -.16em; }
+.line-reveal > span { display: block; transform: translateY(125%); transition: transform 1.2s var(--ease); }
 .is-loaded .line-reveal > span { transform: none; }
 .line-reveal:nth-child(2) > span { transition-delay: .12s; }
 .line-reveal:nth-child(3) > span { transition-delay: .24s; }
@@ -598,14 +598,13 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .scheduler > .eyebrow, .scheduler > .h2, .scheduler > p { padding: 0 clamp(4px, 1vw, 8px); }
 .scheduler .h2 { margin-bottom: 8px; }
 .scheduler > p { color: var(--muted); }
-.calendly-inline-widget { min-width: 300px; height: 760px !important; margin-top: 16px; background: var(--ivory); }
-.calendly-inline-widget iframe { height: 100% !important; min-height: 100% !important; }
+.scheduler__frame { display: block; width: 100%; min-width: 300px; height: 760px; margin-top: 16px; border: 0; background: var(--ivory); }
 .scheduler__alt { margin: 20px 0 0; font-size: 14px; }
 .scheduler__alt a { color: var(--plum-2); border-bottom: 1px solid var(--gold); }
 @media (max-width: 640px) {
   .scheduler { padding: 28px 0 24px; border-left: 0; border-right: 0; margin: 0 calc(var(--gutter) * -1); }
   .scheduler > .eyebrow, .scheduler > .h2, .scheduler > p { padding: 0 var(--gutter); }
-  .calendly-inline-widget { height: 1000px !important; }
+  .scheduler__frame { height: 1000px; }
 }
 
 /* ---------- Listing card extras & anchor offset ---------- */
