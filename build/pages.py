@@ -585,7 +585,7 @@ contact = f"""<section class="page-hero">
         <span class="eyebrow">Free 30-minute consultation</span>
         <h2 class="h2">Book a time</h2>
         <p>Choose a time that works for you. Danielle will call to talk through your move — timeline, neighborhoods, financing and next steps.</p>
-        <iframe class="scheduler__frame" src="{CALENDLY}?embed_type=Inline&amp;embed_domain=dv-realty.vercel.app&amp;hide_gdpr_banner=1&amp;background_color=ffffff&amp;text_color=1b1222&amp;primary_color=b8924f" title="Book a free consultation with Danielle Vaughns" loading="lazy"></iframe>
+        <iframe class="scheduler__frame" src="{CALENDLY}?embed_type=Inline&amp;embed_domain=dv-realty.vercel.app&amp;hide_gdpr_banner=1&amp;background_color=ffffff&amp;text_color=1b1222&amp;primary_color=b8924f" title="Book a free consultation with Danielle Vaughns" width="100%" height="760" frameborder="0"></iframe>
         <p class="scheduler__alt">Calendar not loading? <a href="{CALENDLY}" target="_blank" rel="noopener">Open the scheduler in a new tab ↗</a></p>
       </div>
     </div>
