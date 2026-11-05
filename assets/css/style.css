@@ -614,6 +614,13 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .listing__specs span + span { margin-left: -14px; }
 .listing__cta { margin-top: 28px; align-self: flex-start; }
 .listing__media { display: block; }
+.listing__specs span { white-space: nowrap; }
+@media (max-width: 640px) {
+  .listing__body { padding: 28px 24px 30px; }
+  .listing__specs { gap: 18px; letter-spacing: .14em; flex-wrap: wrap; }
+  .listing__specs span + span::before { margin-right: 18px; }
+  .listing__specs span + span { margin-left: -9px; }
+}
 
 /* ---------- Editorial triptych ---------- */
 .triptych { display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: clamp(8px, 1.2vw, 16px); padding: 0 clamp(8px, 1.2vw, 16px) clamp(8px, 1.2vw, 16px); background: var(--ivory); align-items: center; }
