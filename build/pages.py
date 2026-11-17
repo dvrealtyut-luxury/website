@@ -119,12 +119,12 @@ home = f"""<section class="hero">
     <div class="split">
       <div class="frame reveal">
         <div class="frame__img mask">{img("danielle-smile", "Danielle Vaughns smiling, resting her chin on her hand at a kitchen table", sizes="(max-width: 900px) 100vw, 45vw")}</div>
-        <div class="frame__tag"><small>KW Utah</small><strong>#8 Individual Producer</strong></div>
+        <div class="frame__tag"><small>KW Utah</small><strong>Top 10 Individual Producer</strong></div>
       </div>
       <div>
         <span class="eyebrow reveal">Meet your agent</span>
         <h2 class="h2 reveal reveal-d1">A personal guide for <em>one of life's biggest moves.</em></h2>
-        <p class="lede reveal reveal-d2">With deep roots in Utah and years of experience guiding executives, physicians and their families through relocation, Danielle brings local expertise, genuine care and complete discretion to every client relationship. Whether you're moving across the country or across the valley, she makes the journey feel effortless.</p>
+        <p class="lede reveal reveal-d2">Danielle moved 12 times as an Air Force family, so she knows firsthand what relocation really takes. Today she guides executives, physicians and their families through their own moves with local expertise, genuine care and complete discretion. Whether you're moving across the country or across the valley, she makes the journey feel effortless.</p>
         <ul class="checklist reveal reveal-d3">
           <li>Licensed Utah REALTOR®</li>
           <li>{LUXURY} · Luxury Market Center Liaison</li>
@@ -164,7 +164,7 @@ home = f"""<section class="hero">
         <p>School research, commutes, utilities and trusted local resources — Danielle guides you through every step of the move.</p>
       </article>
     </div>
-    <div class="reveal" style="margin-top:64px"><a class="link-arrow" href="relocate.html">Start your Utah journey {ARROW}</a></div>
+    <div class="reveal" style="margin-top:64px"><a class="link-arrow" href="services.html">Explore all services {ARROW}</a></div>
   </div>
 </section>
 
@@ -271,7 +271,29 @@ about = f"""<section class="page-hero">
   </div>
 </section>
 
-<section class="section section--sand">
+<section class="section section--sand" id="story">
+  <div class="wrap">
+    <div class="story">
+      <div>
+        <span class="eyebrow reveal">Her story</span>
+        <h2 class="h2 reveal reveal-d1">Twelve moves taught her <em>what home really means.</em></h2>
+        <dl class="story-stats reveal reveal-d2">
+          <div><dt>Moves as an Air Force family</dt><dd>12</dd></div>
+          <div><dt>Born in</dt><dd>Virginia</dd></div>
+          <div><dt>Gives back</dt><dd>Non-profit board member</dd></div>
+        </dl>
+      </div>
+      <div class="story__text">
+        <p class="lede reveal">Danielle was born in Virginia and spent her childhood on the East Coast before her family moved to Olympia, Washington, when her dad retired from the Air Force.</p>
+        <p class="reveal">Moving would continue to be a theme throughout her life. She married her college sweetheart, a newly commissioned Air Force officer, and over his career they lived throughout the country and moved 12 times. Danielle became all too familiar with the process of moving and relocation — and that experience shapes how she guides every client today.</p>
+        <p class="reveal">Before real estate, Danielle spent several years in non-profit development and marketing. She now uses those skills to help clients buy, sell and invest in property. Her compassionate heart keeps her involved in serving the underprivileged in her community, through volunteer work and as a board member of a local non-profit.</p>
+        <p class="reveal">Multiple moves aside, Danielle has always been passionate about travel and has explored much of Europe. She loves the thrill of adventure while also having a deep appreciation for settling down. When she isn't busy with real estate or serving the community, you'll find her skiing, discovering new restaurants and coffee shops, or enjoying time with her family. Her charisma is infectious and overflows into every part of her life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow eyebrow--center reveal">Qualifications</span>
@@ -279,7 +301,7 @@ about = f"""<section class="page-hero">
     </div>
     <div class="creds">
       <div class="cred reveal">{ICON['badge']}<strong>Licensed Utah REALTOR®</strong></div>
-      <div class="cred reveal reveal-d1">{ICON['star']}<strong>KW Utah #8 Individual Producer</strong></div>
+      <div class="cred reveal reveal-d1">{ICON['star']}<strong>KW Utah Top 10 Individual Producer</strong></div>
       <div class="cred reveal reveal-d2">{ICON['cross']}<strong>Medical &amp; C-Suite Relocation Specialist</strong></div>
       <div class="cred reveal">{ICON['diamond']}<strong>{LUXURY} Agent &amp; Luxury Market Center Liaison</strong></div>
       <div class="cred reveal reveal-d1">{ICON['mountain']}<strong>Member, Utah Board of REALTORS® &amp; Park City Board of REALTORS®</strong></div>
@@ -288,7 +310,7 @@ about = f"""<section class="page-hero">
   </div>
 </section>
 
-<section class="section">
+<section class="section section--sand">
   <div class="wrap">
     <div class="split">
       <div class="frame reveal">
@@ -297,7 +319,7 @@ about = f"""<section class="page-hero">
       </div>
       <div>
         <span class="eyebrow reveal">Local expertise</span>
-        <h2 class="h2 reveal reveal-d1">Deep roots in Utah's <em>most sought-after communities.</em></h2>
+        <h2 class="h2 reveal reveal-d1">At home in Utah's <em>most sought-after communities.</em></h2>
         <p class="lede reveal reveal-d2">From the historic streets of Yalecrest to the mountain charm of Park City, I know Northern Utah's most desirable communities inside and out — the commutes to major hospitals, the schools, the lifestyle, and the little details that make each area feel like home.</p>
         <ul class="checklist checklist--cols reveal reveal-d3">
           <li>Salt Lake City &amp; Yalecrest</li>
@@ -348,6 +370,119 @@ about = f"""<section class="page-hero">
 </section>
 
 {cta(title="Let's find your <em>Utah home.</em>", lede="Luxury service. Lasting relationships. Whether you're relocating from out of state or searching locally, let's start with a conversation.")}"""
+
+# --------------------------------------------------------------------------- SERVICES
+SERVICES = [
+    ("buying", "Buying a Home", "Primary homes · Second homes · Luxury properties",
+     "From the first conversation to the day you get your keys, Danielle guides your purchase with local insight, sharp negotiation and complete discretion.",
+     ["A hand-curated shortlist matched to your lifestyle and budget",
+      "Access to off-market and coming-soon homes",
+      "In-person and live virtual tours",
+      "Introductions to trusted lenders, including physician and jumbo loans",
+      "Strategic offers and skilled negotiation",
+      "Inspection, appraisal and closing, coordinated around your schedule"],
+     ("listings.html", "View current listings")),
+    ("selling", "Selling a Home", "Pricing · Preparation · Marketing · Negotiation",
+     "Danielle positions your home to attract qualified buyers and the strongest possible offer — backed by Keller Williams Luxury and handled with discretion from listing to closing.",
+     ["A pricing strategy grounded in current market data",
+      "Guidance on preparing and presenting your home",
+      "Marketing that reaches qualified local and out-of-state buyers",
+      "Private, discreet showings when you need them",
+      "Skilled negotiation on every offer",
+      "Steady communication through closing"],
+     ("contact.html#message", "Talk about selling")),
+    ("relocation", "Relocation", "Out-of-state moves · Buying from afar · Settling in",
+     "Danielle moved 12 times as an Air Force family, so she knows what relocation really takes. Her six-step process takes you from wherever you are today to settled in Northern Utah.",
+     ["A discovery call about your timeline, budget, commute and lifestyle",
+      "A neighborhood shortlist with honest notes on the trade-offs",
+      "Area tours in person or by live video",
+      "A clear rent-first or buy-now strategy",
+      "Coordination with a trusted agent in your current city",
+      "Local recommendations to help you settle in"],
+     ("relocate.html", "See the relocation process")),
+    ("medical", "Medical &amp; C-Suite Relocation", "Physicians · Residents · Executives",
+     "A residency match, a new attending role, a C-suite appointment — these moves come with fixed dates and very little free time. Danielle builds your move around your schedule, with complete discretion.",
+     ["Neighborhoods mapped to your hospital or office commute",
+      "Lenders experienced with physician and jumbo loans",
+      "Luxury rentals while you find the right home",
+      "Virtual tours and remote signing so you can buy from anywhere",
+      "Confidential representation for high-profile clients"],
+     ("relocate.html#medical", "Medical &amp; executive relocation")),
+    ("rentals", "Luxury Rentals &amp; Corporate Housing", "Mid- to long-term · Corporate · Medical stays",
+     "Not every move starts with a purchase. Danielle arranges high-end rentals and corporate housing for executives, medical professionals and their families — handled with the same care and discretion as a luxury sale.",
+     ["Mid- to long-term luxury rentals",
+      "Corporate housing for relocating executives and their families",
+      "Short-term stays in high-end homes for medical professionals and families",
+      "Homes matched to your dates, budget and lifestyle",
+      "A smooth path to buying when you're ready"],
+     ("relocate.html#luxury-services", "More about luxury services")),
+    ("investment", "Investment Properties", "Buy · Sell · Grow your portfolio",
+     "Whether you're adding a rental, a second home or your first investment property, Danielle helps you evaluate opportunities and buy or sell with a clear plan.",
+     ["Help finding properties that fit your goals",
+      "Guidance on neighborhoods across Northern Utah",
+      "Representation when buying or selling investment properties",
+      "Introductions to trusted lenders and local resources"],
+     ("contact.html#message", "Talk about investing")),
+]
+
+SERVICE_SUMMARY = {
+    "buying": "Find the right home with local insight, off-market access and skilled negotiation.",
+    "selling": "Price, present and market your home to reach qualified buyers — with discretion.",
+    "relocation": "A calm, six-step move to Northern Utah from wherever you are today.",
+    "medical": "Moves built around fixed start dates for physicians and executives.",
+    "rentals": "Mid- to long-term luxury rentals, corporate housing and medical stays.",
+    "investment": "Buy or sell rentals, second homes and investment properties with a clear plan.",
+}
+
+service_overview = "\n".join(f"""      <a class="svc-card reveal reveal-d{i % 3}" href="#{sid}">
+        <span class="service__num">0{i+1}</span>
+        <h3>{name}</h3>
+        <p>{SERVICE_SUMMARY[sid]}</p>
+      </a>""" for i, (sid, name, tags, lede, items, link) in enumerate(SERVICES))
+
+service_details = "\n".join(f"""    <article class="area" id="{sid}">
+      <div class="area__head reveal">
+        <span class="area__num">No. 0{i+1}</span>
+        <h2 class="h2">{name}</h2>
+        <div class="tags">{tags}</div>
+      </div>
+      <div class="area__body reveal reveal-d1">
+        <p class="lede">{lede}</p>
+        <ul class="checklist checklist--cols">
+{chr(10).join(f"          <li>{x}</li>" for x in items)}
+        </ul>
+        <a class="link-arrow" href="{link[0]}">{link[1]} {ARROW}</a>
+      </div>
+    </article>""" for i, (sid, name, tags, lede, items, link) in enumerate(SERVICES))
+
+services = f"""<section class="page-hero">
+  <div class="page-hero__glow"></div>
+  <div class="wrap">
+    <div class="crumbs fade-up"><a href="index.html">Home</a><span>/</span>Services</div>
+    <h1 class="h1">
+      <span class="line-reveal"><span>Every service,</span></span>
+      <span class="line-reveal"><span><em>one trusted advisor.</em></span></span>
+    </h1>
+    <p class="lede fade-up">Buying, selling, relocating, renting or investing — Danielle guides every step with local expertise, white-glove service and complete discretion.</p>
+  </div>
+  {RIDGE.format(cls="page-hero__ridge")}
+</section>
+
+<section class="section section--sand">
+  <div class="wrap">
+    <div class="svc-grid">
+{service_overview}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+{service_details}
+  </div>
+</section>
+
+{cta(title="Not sure where <em>to start?</em>", lede="Tell Danielle about your plans and she'll recommend the right next step — no pressure, no obligation.")}"""
 
 # --------------------------------------------------------------------------- RELOCATE
 STEPS = [
@@ -705,7 +840,9 @@ PAGES = [
     ("index.html", "Danielle Vaughns | Utah Luxury Real Estate & Relocation · DV Realty",
      "Danielle Vaughns is a Utah luxury REALTOR® and relocation specialist for C-suite executives, physicians and medical professionals, serving Salt Lake City, Park City and Northern Utah.", home),
     ("about.html", "About Danielle Vaughns | DV Realty",
-     "Meet Danielle Vaughns — Utah luxury REALTOR®, KW Utah #8 Individual Producer and relocation specialist for medical and C-suite professionals — and her team.", about),
+     "Meet Danielle Vaughns — Utah luxury REALTOR®, KW Utah Top 10 Individual Producer and relocation specialist for medical and C-suite professionals — and her team.", about),
+    ("services.html", "Services | DV Realty",
+     "Buying, selling, relocation, medical and C-suite moves, luxury rentals, corporate housing and investment properties with Danielle Vaughns, Utah luxury REALTOR®.", services),
     ("relocate.html", "Relocate to Utah | DV Realty",
      "A calm, expert-led relocation to Utah, from discovery call to keys — with specialized support for physicians and executives, plus luxury rentals and corporate housing.", relocate),
     ("communities.html", "Utah Communities | DV Realty",
