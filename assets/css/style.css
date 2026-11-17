@@ -643,3 +643,27 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .member h3 { font-size: 22px; }
   .member__role { font-size: 9.5px; letter-spacing: .18em; }
 }
+
+/* ---------- KW Luxury co-branding ---------- */
+.brand-lockup { display: flex; align-items: center; gap: 18px; flex-shrink: 0; }
+.brand-kw { display: flex; align-items: center; padding-left: 18px; border-left: 1px solid var(--line); height: 38px; }
+.brand-kw img { height: 36px; width: auto; transition: height .5s var(--ease); }
+.brand-kw .kw-white { display: none; }
+.site-header.is-scrolled .brand-kw img { height: 31px; }
+/* White version over dark backgrounds: inner-page banners and the open phone menu */
+.header-light:not(.is-scrolled) .brand-kw { border-left-color: rgba(255,255,255,.3); }
+.header-light:not(.is-scrolled) .brand-kw .kw-ink,
+.menu-open .site-header .brand-kw .kw-ink { display: none; }
+.header-light:not(.is-scrolled) .brand-kw .kw-white,
+.menu-open .site-header .brand-kw .kw-white { display: block; }
+.menu-open .site-header .brand-kw { border-left-color: rgba(255,255,255,.3); }
+.footer-logos { display: flex; align-items: center; gap: 22px; margin-bottom: 28px; }
+.footer-logos img { margin-bottom: 0; }
+.footer-logos .footer-kw { height: 38px; width: auto; padding-left: 22px; border-left: 1px solid var(--line-light); box-sizing: content-box; }
+.brokerage-kw { display: block; height: 42px; width: auto; margin-top: 14px; }
+@media (max-width: 640px) {
+  .brand-lockup { gap: 12px; }
+  .brand img, .site-header.is-scrolled .brand img { height: 30px; }
+  .brand-kw { padding-left: 12px; height: 30px; }
+  .brand-kw img, .site-header.is-scrolled .brand-kw img { height: 25px; }
+}

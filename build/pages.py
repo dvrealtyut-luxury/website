@@ -643,7 +643,7 @@ contact = f"""<section class="page-hero">
           <div><dt>Call or text</dt><dd><a href="tel:{PHONE_TEL}">{PHONE}</a></dd></div>
           <div><dt>Email</dt><dd><a href="mailto:{EMAIL}">{EMAIL}</a></dd></div>
           <div><dt>Based in</dt><dd>Salt Lake City, Utah<br>Serving Northern Utah</dd></div>
-          <div><dt>Brokerage</dt><dd>{BROKERAGE}<br>{LUXURY}</dd></div>
+          <div><dt>Brokerage</dt><dd>{BROKERAGE}<br>{LUXURY}<img class="brokerage-kw" src="assets/img/kw-luxury-ink.png" alt="Keller Williams Luxury" width="560" height="170" loading="lazy"></dd></div>
         </dl>
       </div>
 

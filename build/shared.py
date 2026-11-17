@@ -62,9 +62,15 @@ def header(active, light=False):
     return f"""<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header{' header-light' if light else ''}">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="DV Realty — home">
-      <img src="assets/img/logo-dv-realty.png" alt="DV Realty" width="664" height="199">
-    </a>
+    <div class="brand-lockup">
+      <a class="brand" href="index.html" aria-label="DV Realty — home">
+        <img src="assets/img/logo-dv-realty.png" alt="DV Realty" width="664" height="199">
+      </a>
+      <span class="brand-kw">
+        <img class="kw-ink" src="assets/img/kw-luxury-ink.png" alt="Keller Williams Luxury" width="560" height="170">
+        <img class="kw-white" src="assets/img/kw-luxury-white.png" alt="" width="560" height="170">
+      </span>
+    </div>
     <nav class="nav" aria-label="Primary">
 {links}
         <a class="btn btn--gold" href="contact.html#schedule">Schedule a Call</a>
@@ -106,7 +112,10 @@ def footer():
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/img/logo-dv-realty.png" alt="DV Realty" width="664" height="199" loading="lazy">
+        <div class="footer-logos">
+          <img src="assets/img/logo-dv-realty.png" alt="DV Realty" width="664" height="199" loading="lazy">
+          <img class="footer-kw" src="assets/img/kw-luxury-white.png" alt="Keller Williams Luxury" width="560" height="170" loading="lazy">
+        </div>
         <p>Utah's relocation specialist — helping individuals, families and medical professionals find their home and build their new life in Utah.</p>
       </div>
       <div>
