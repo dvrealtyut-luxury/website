@@ -21,6 +21,7 @@ ARROW = '<svg class="arrow" viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5
 NAV = [
     ("index.html", "Home"),
     ("about.html", "About"),
+    ("services.html", "Services"),
     ("relocate.html", "Relocate"),
     ("communities.html", "Communities"),
     ("listings.html", "Listings"),
@@ -116,7 +117,7 @@ def footer():
           <img src="assets/img/logo-dv-realty.png" alt="DV Realty" width="664" height="199" loading="lazy">
           <img class="footer-kw" src="assets/img/kw-luxury-white.png" alt="Keller Williams Luxury" width="560" height="170" loading="lazy">
         </div>
-        <p>Utah's relocation specialist — helping individuals, families and medical professionals find their home and build their new life in Utah.</p>
+        <p>Utah luxury real estate and relocation — helping executives, medical professionals and families find their home and build their new life in Northern Utah.</p>
       </div>
       <div>
         <h4>Explore</h4>
@@ -131,10 +132,12 @@ def footer():
       <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="relocate.html">Relocation Services</a></li>
-          <li><a href="relocate.html#medical">Medical Professionals</a></li>
-          <li><a href="listings.html">Buy a Home</a></li>
-          <li><a href="contact.html#message">Sell Your Home</a></li>
+          <li><a href="services.html#buying">Buying a Home</a></li>
+          <li><a href="services.html#selling">Selling a Home</a></li>
+          <li><a href="services.html#relocation">Relocation</a></li>
+          <li><a href="services.html#medical">Medical &amp; C-Suite</a></li>
+          <li><a href="services.html#rentals">Luxury Rentals</a></li>
+          <li><a href="services.html#investment">Investment Properties</a></li>
         </ul>
       </div>
       <div class="footer-contact">

@@ -667,3 +667,33 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .brand-kw { padding-left: 12px; height: 30px; }
   .brand-kw img, .site-header.is-scrolled .brand-kw img { height: 25px; }
 }
+
+/* ---------- About: her story ---------- */
+.story { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(40px, 7vw, 112px); align-items: start; }
+.story .h2 { margin-bottom: 40px; }
+.story__text p + p { margin-top: 20px; }
+.story__text p:not(.lede) { color: var(--text); }
+.story-stats { display: grid; gap: 0; border-top: 1px solid var(--line); margin: 0; }
+.story-stats div { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.story-stats dt { font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 6px; }
+.story-stats dd { margin: 0; font-family: var(--serif); font-weight: 300; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; color: var(--ink); }
+
+/* ---------- Services page ---------- */
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); border: 1px solid var(--line); }
+.svc-card { display: block; background: var(--ivory); padding: clamp(32px, 3.4vw, 48px); transition: background .5s var(--ease); }
+.svc-card:hover { background: #fff; }
+.svc-card h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 2.2vw, 32px); line-height: 1.15; color: var(--ink); margin: 18px 0 12px; }
+.svc-card p { color: var(--muted); font-size: 15.5px; }
+@media (max-width: 900px) {
+  .story { grid-template-columns: 1fr; }
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .svc-grid { grid-template-columns: 1fr; }
+}
+.svc-card .service__num { font-size: 44px; margin-bottom: 0; }
+.nav .btn { white-space: nowrap; }
+@media (max-width: 1260px) {
+  .nav { display: none; }
+  .menu-toggle { display: block; }
+}
