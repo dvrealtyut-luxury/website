@@ -697,3 +697,35 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .nav { display: none; }
   .menu-toggle { display: block; }
 }
+
+/* ---------- Google reviews widget ---------- */
+.gr { font-family: Roboto, "Helvetica Neue", Arial, sans-serif; }
+.gr-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+.gr-brand { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 500; color: #202124; }
+.gr-brand .gr-g { width: 30px; height: 30px; }
+.gr-btn { display: inline-flex; align-items: center; height: 40px; padding: 0 22px; border-radius: 20px; background: #1a73e8; color: #fff; font-size: 14px; font-weight: 500; letter-spacing: .01em; transition: background .2s, box-shadow .2s; }
+.gr-btn:hover { background: #1765cc; box-shadow: 0 1px 3px rgba(60,64,67,.3); }
+.gr-track { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
+.gr-card { background: #fff; border-radius: 12px; padding: 22px 22px 18px; box-shadow: 0 1px 2px rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15); color: #3c4043; }
+.gr-card__head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.gr-avatar { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 18px; font-weight: 500; }
+.gr-name { flex: 1; min-width: 0; font-size: 15px; font-weight: 500; color: #202124; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gr-card__head .gr-g { flex: none; width: 20px; height: 20px; }
+.gr-stars { display: flex; gap: 1px; margin-bottom: 10px; }
+.gr-stars svg { width: 18px; height: 18px; fill: #fbbc04; }
+.gr-text { margin: 0; font-size: 14.5px; line-height: 1.6; color: #3c4043; }
+.gr-text.is-clamped { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; line-clamp: 6; overflow: hidden; }
+.gr-card.is-open .gr-text.is-clamped { display: block; -webkit-line-clamp: unset; line-clamp: unset; overflow: visible; }
+.gr-more { margin-top: 8px; padding: 0; border: 0; background: none; font: inherit; font-size: 14px; font-weight: 500; color: #1a73e8; cursor: pointer; }
+.gr-more:hover { text-decoration: underline; }
+@media (max-width: 900px) {
+  .gr-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; margin: 0 calc(var(--gutter) * -1); padding: 4px var(--gutter) 16px; scrollbar-width: none; }
+  .gr-track::-webkit-scrollbar { display: none; }
+  .gr-card { flex: 0 0 min(84%, 360px); scroll-snap-align: center; }
+}
+@media (max-width: 640px) {
+  .gr-bar { flex-wrap: nowrap; }
+  .gr-brand { font-size: 17px; gap: 10px; }
+  .gr-brand .gr-g { width: 24px; height: 24px; }
+  .gr-btn { height: 36px; padding: 0 16px; font-size: 13px; white-space: nowrap; }
+}
