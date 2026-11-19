@@ -4,7 +4,7 @@ EMAIL = "dvrealtyut@gmail.com"
 KW_SEARCH = "https://daniellevaughns.kw.com"
 CALENDLY = "https://calendly.com/dvrealtyut/30min"
 # Update when the custom domain is connected (used for social share previews)
-SITE_URL = "https://dv-realty.vercel.app"
+SITE_URL = "https://dvrealtyslc.com"
 BROKERAGE = "KW Utah Realtors Keller Williams"
 LUXURY = "KW Utah Realtors Luxury"
 
@@ -159,6 +159,11 @@ def footer():
 </footer>"""
 
 
+def canonical_path(filename):
+    # Clean URLs (vercel.json): index.html -> "", about.html -> "about"
+    return "" if filename == "index.html" else filename.removesuffix(".html")
+
+
 def page(filename, title, description, body, light_header=False):
     return f"""<!doctype html>
 <html lang="en">
@@ -172,6 +177,8 @@ def page(filename, title, description, body, light_header=False):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
 <meta property="og:image" content="{SITE_URL}/assets/img/og-image.jpg">
+<meta property="og:url" content="{SITE_URL}/{canonical_path(filename)}">
+<link rel="canonical" href="{SITE_URL}/{canonical_path(filename)}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
