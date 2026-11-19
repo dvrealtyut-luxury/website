@@ -9,7 +9,7 @@
 TEAM = [
     {
         "name": "Ava Wilson",
-        "role": "Team Member",          # PLACEHOLDER: replace with Ava's title
+        "role": "Real Estate Agent",
         "bio": "",                      # PLACEHOLDER: one or two sentences about Ava
         "image": "",                    # e.g. "assets/img/team/ava-wilson.webp"
     },
