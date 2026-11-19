@@ -3,6 +3,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from shared import *
 from listings import LISTINGS
 from team import TEAM
+from reviews import REVIEWS, GOOGLE_REVIEWS_URL
+import html as _html
 
 # Output to the repo root by default: python3 build/pages.py
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
@@ -70,6 +72,56 @@ def featured_section(limit=None, head=True, sand=False):
     <div class="listings">
 {cards}
     </div>{more}
+  </div>
+</section>"""
+
+
+# --------------------------------------------------------------------------- GOOGLE REVIEWS
+GOOGLE_G = ('<svg class="gr-g" viewBox="0 0 48 48" aria-hidden="true">'
+    '<path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>'
+    '<path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>'
+    '<path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>'
+    '<path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>'
+    '</svg>')
+STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>'
+
+
+def review_card(i, r):
+    text = _html.escape(r["text"].strip()).replace("\n\n", "<br><br>").replace("\n", "<br>")
+    return f"""      <article class="gr-card reveal reveal-d{i % 3}">
+        <header class="gr-card__head">
+          <span class="gr-avatar" style="background:{r.get('color', '#1a73e8')}" aria-hidden="true">{_html.escape(r['name'][0])}</span>
+          <span class="gr-name">{_html.escape(r['name'])}</span>
+          {GOOGLE_G}
+        </header>
+        <div class="gr-stars" role="img" aria-label="Rated 5 out of 5 stars">{STAR * 5}</div>
+        <p class="gr-text">{text}</p>
+        <button class="gr-more" type="button" aria-expanded="false" hidden>Read more</button>
+      </article>"""
+
+
+def reviews_section(sand=False):
+    if not REVIEWS:
+        return ""
+    cards = "\n".join(review_card(i, r) for i, r in enumerate(REVIEWS))
+    return f"""<section class="section{' section--sand' if sand else ''}" id="reviews">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        <span class="eyebrow reveal">Client reviews</span>
+        <h2 class="h2 reveal reveal-d1">In their <em>own words.</em></h2>
+      </div>
+      <p class="lede reveal reveal-d2">Real reviews from Danielle's clients on Google.</p>
+    </div>
+    <div class="gr reveal">
+      <div class="gr-bar">
+        <div class="gr-brand">{GOOGLE_G}<span>Google Reviews</span></div>
+        <a class="gr-btn" href="{GOOGLE_REVIEWS_URL}" target="_blank" rel="noopener">See all reviews</a>
+      </div>
+      <div class="gr-track">
+{cards}
+      </div>
+    </div>
   </div>
 </section>"""
 
@@ -185,6 +237,8 @@ home = f"""<section class="hero">
     <div class="reveal reveal-d4"><a class="btn btn--gold" href="relocate.html#medical">Plan Your Relocation {ARROW}</a></div>
   </div>
 </section>
+
+{reviews_section(sand=True)}
 
 <section class="section">
   <div class="wrap">
@@ -356,6 +410,8 @@ about = f"""<section class="page-hero">
     </div>
   </div>
 </section>
+
+{reviews_section()}
 
 <section class="section section--sand" id="team">
   <div class="wrap">

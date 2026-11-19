@@ -57,6 +57,26 @@
     targets.forEach(function (el) { el.classList.add("is-in"); });
   }
 
+  // Google reviews: clamp long reviews with a "Read more" toggle
+  document.querySelectorAll(".gr-card").forEach(function (card) {
+    var text = card.querySelector(".gr-text");
+    var btn = card.querySelector(".gr-more");
+    if (!text || !btn) return;
+    text.classList.add("is-clamped");
+    function check() {
+      if (card.classList.contains("is-open")) return;
+      btn.hidden = text.scrollHeight <= text.clientHeight + 2;
+    }
+    check();
+    window.addEventListener("resize", check);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(check);
+    btn.addEventListener("click", function () {
+      var open = card.classList.toggle("is-open");
+      btn.textContent = open ? "Read less" : "Read more";
+      btn.setAttribute("aria-expanded", String(open));
+    });
+  });
+
   // Footer year
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
