@@ -5,6 +5,8 @@ KW_SEARCH = "https://daniellevaughns.kw.com"
 CALENDLY = "https://calendly.com/dvrealtyut/30min"
 # Update when the custom domain is connected (used for social share previews)
 SITE_URL = "https://dvrealtyslc.com"
+# Google Analytics 4 Measurement ID (starts with "G-"). Leave empty to turn tracking off.
+GA_MEASUREMENT_ID = ""
 BROKERAGE = "KW Utah Realtors Keller Williams"
 LUXURY = "KW Utah Realtors Luxury"
 
@@ -159,6 +161,68 @@ def footer():
 </footer>"""
 
 
+AREAS_SERVED = ["Salt Lake City", "Yalecrest", "Park City", "Millcreek", "Holladay",
+                "Cottonwood Heights", "Sandy", "Draper", "South Jordan", "Utah County"]
+
+
+def structured_data():
+    """schema.org description of Danielle's business, read by Google, Bing and AI assistants."""
+    import json
+    agent_id = f"{SITE_URL}/#agent"
+    data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "RealEstateAgent",
+                "@id": agent_id,
+                "name": "Danielle Vaughns — DV Realty",
+                "url": f"{SITE_URL}/",
+                "logo": f"{SITE_URL}/assets/img/logo-dv-realty.png",
+                "image": f"{SITE_URL}/assets/img/danielle-blazer-1400.webp",
+                "description": "Utah luxury REALTOR® and relocation specialist for C-suite executives, physicians and medical professionals, serving Salt Lake City, Park City and Northern Utah.",
+                "telephone": PHONE_TEL,
+                "email": EMAIL,
+                "address": {"@type": "PostalAddress", "addressLocality": "Salt Lake City",
+                            "addressRegion": "UT", "addressCountry": "US"},
+                "areaServed": [{"@type": "Place", "name": f"{a}, Utah"} for a in AREAS_SERVED],
+                "knowsAbout": ["Luxury real estate", "Relocation to Utah", "Medical professional relocation",
+                               "Executive relocation", "Luxury rentals", "Corporate housing",
+                               "Investment properties", "Physician and jumbo loans"],
+                "parentOrganization": {"@type": "Organization", "name": BROKERAGE},
+                "employee": {"@id": f"{SITE_URL}/#danielle"},
+                "sameAs": [KW_SEARCH],
+            },
+            {
+                "@type": "Person",
+                "@id": f"{SITE_URL}/#danielle",
+                "name": "Danielle Vaughns",
+                "jobTitle": "REALTOR®",
+                "url": f"{SITE_URL}/about",
+                "image": f"{SITE_URL}/assets/img/danielle-blazer-1400.webp",
+                "worksFor": {"@id": agent_id},
+                "memberOf": [{"@type": "Organization", "name": "Utah Board of REALTORS®"},
+                             {"@type": "Organization", "name": "Park City Board of REALTORS®"}],
+            },
+            {
+                "@type": "WebSite",
+                "@id": f"{SITE_URL}/#website",
+                "url": f"{SITE_URL}/",
+                "name": "DV Realty — Danielle Vaughns",
+                "publisher": {"@id": agent_id},
+            },
+        ],
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+
+def analytics():
+    if not GA_MEASUREMENT_ID:
+        return ""
+    return (f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}"></script>\n'
+            "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
+            f"gtag('js',new Date());gtag('config','{GA_MEASUREMENT_ID}');</script>")
+
+
 def canonical_path(filename):
     # Clean URLs (vercel.json): index.html -> "", about.html -> "about"
     return "" if filename == "index.html" else filename.removesuffix(".html")
@@ -188,6 +252,8 @@ def page(filename, title, description, body, light_header=False):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css?v={asset_version('assets/css/style.css')}">
+{structured_data()}
+{analytics()}
 </head>
 <body>
 {header(filename, light_header)}

@@ -870,6 +870,20 @@ contact = f"""<section class="page-hero">
               <option>Just exploring</option>
             </select>
           </div>
+          <div class="field field--full">
+            <label for="f-source">How did you hear about Danielle?</label>
+            <select id="f-source" name="source">
+              <option value="">Select one</option>
+              <option>Google search</option>
+              <option>Google reviews / Google Maps</option>
+              <option>ChatGPT or another AI assistant</option>
+              <option>Zillow or Realtor.com</option>
+              <option>Keller Williams</option>
+              <option>Referral from a friend or client</option>
+              <option>Social media</option>
+              <option>Other</option>
+            </select>
+          </div>
           <fieldset class="field field--full">
             <legend>I'm interested in</legend>
             <div class="chips">
@@ -913,3 +927,20 @@ for fn, title, desc, body in PAGES:
     with open(f"{OUT}/{fn}", "w") as f:
         f.write(page(fn, title, desc, body, light_header=fn != "index.html"))
     print("wrote", fn)
+
+# Sitemap and robots.txt so Google, Bing and AI assistants can find every page.
+urls = "\n".join(f"  <url><loc>{SITE_URL}/{canonical_path(fn)}</loc></url>" for fn, *_ in PAGES)
+with open(f"{OUT}/sitemap.xml", "w") as f:
+    f.write(f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{urls}
+</urlset>
+""")
+with open(f"{OUT}/robots.txt", "w") as f:
+    f.write(f"""# Every search engine and AI assistant is welcome to read this site.
+User-agent: *
+Allow: /
+
+Sitemap: {SITE_URL}/sitemap.xml
+""")
+print("wrote sitemap.xml, robots.txt")

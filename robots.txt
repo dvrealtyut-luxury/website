@@ -1,0 +1,5 @@
+# Every search engine and AI assistant is welcome to read this site.
+User-agent: *
+Allow: /
+
+Sitemap: https://dvrealtyslc.com/sitemap.xml
