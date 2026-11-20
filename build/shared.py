@@ -73,7 +73,7 @@ def header(active, light=False):
       </a>
       <span class="brand-kw">
         <img class="kw-ink" src="assets/img/kw-luxury-ink.png" alt="Keller Williams Luxury" width="560" height="170">
-        <img class="kw-white" src="assets/img/kw-luxury-white.png" alt="" width="560" height="170">
+        <img class="kw-white" src="assets/img/kw-luxury-white.png" alt="Keller Williams Luxury" width="560" height="170">
       </span>
     </div>
     <nav class="nav" aria-label="Primary">
