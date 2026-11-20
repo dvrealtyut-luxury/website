@@ -156,7 +156,7 @@ home = f"""<section class="hero">
     <div class="hero__badge" aria-hidden="true">
       <svg viewBox="0 0 168 168"><defs><path id="circ" d="M84 84m-64 0a64 64 0 1 1 128 0a64 64 0 1 1-128 0"/></defs>
         <text><textPath href="#circ">Utah Relocation Specialist · DV Realty · </textPath></text></svg>
-      <img src="assets/img/monogram.png" alt="" width="199" height="199">
+      <img src="assets/img/monogram.png" alt="DV Realty monogram" width="199" height="199">
     </div>
     <div class="hero__meta">Salt Lake City · Park City · Northern Utah</div>
   </div>
@@ -908,13 +908,13 @@ contact = f"""<section class="page-hero">
 
 PAGES = [
     ("index.html", "Danielle Vaughns | Utah Luxury Real Estate & Relocation · DV Realty",
-     "Danielle Vaughns is a Utah luxury REALTOR® and relocation specialist for C-suite executives, physicians and medical professionals, serving Salt Lake City, Park City and Northern Utah.", home),
+     "Utah luxury REALTOR® Danielle Vaughns helps C-suite executives, physicians and medical professionals move to Salt Lake City, Park City and Northern Utah.", home),
     ("about.html", "About Danielle Vaughns | DV Realty",
-     "Meet Danielle Vaughns — Utah luxury REALTOR®, KW Utah Top 10 Individual Producer and relocation specialist for medical and C-suite professionals — and her team.", about),
+     "Meet Danielle Vaughns, Utah luxury REALTOR®, KW Utah Top 10 Individual Producer and relocation specialist for medical and C-suite professionals.", about),
     ("services.html", "Services | DV Realty",
-     "Buying, selling, relocation, medical and C-suite moves, luxury rentals, corporate housing and investment properties with Danielle Vaughns, Utah luxury REALTOR®.", services),
+     "Buying, selling, relocation, medical and C-suite moves, luxury rentals, corporate housing and investment properties with Utah REALTOR® Danielle Vaughns.", services),
     ("relocate.html", "Relocate to Utah | DV Realty",
-     "A calm, expert-led relocation to Utah, from discovery call to keys — with specialized support for physicians and executives, plus luxury rentals and corporate housing.", relocate),
+     "A calm, expert-led move to Utah from first call to keys, with support for physicians and executives, plus luxury rentals and corporate housing.", relocate),
     ("communities.html", "Utah Communities | DV Realty",
      "An insider's guide to Salt Lake City, Yalecrest, Park City, Millcreek, Holladay, Cottonwood Heights, Sandy, Draper, South Jordan and Utah County.", communities),
     ("listings.html", "Utah Homes for Sale | DV Realty",
