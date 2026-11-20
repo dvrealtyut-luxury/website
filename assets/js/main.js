@@ -114,6 +114,7 @@
         "Moving from: " + (data.get("from") || "—"),
         "Timeline: " + (data.get("timeline") || "—"),
         "Interested in: " + interests,
+        "Heard about Danielle from: " + (data.get("source") || "—"),
         "",
         data.get("message") || ""
       ];

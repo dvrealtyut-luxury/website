@@ -56,3 +56,10 @@ Photos of Danielle live in `assets/img/` as WebP at two widths (800 and 1400px).
 ## Hosting
 
 Hosted on Vercel (config in `vercel.json`: clean URLs such as `/about`, asset caching). Every push to `main` redeploys the live site automatically; other branches get preview links.
+
+## Search, AI assistants & analytics
+
+- `python3 build/pages.py` also writes **sitemap.xml** and **robots.txt** (all crawlers, including AI assistants, are allowed).
+- Every page includes **structured data** (schema.org `RealEstateAgent`, `Person`, `WebSite`) describing Danielle, her brokerage and the areas she serves. Edit it in `structured_data()` in `build/shared.py`.
+- **Google Analytics 4:** the Google tag ID is set in `GA_MEASUREMENT_ID` in `build/shared.py` (currently `GTM-NFPKPZ6C`; a `G-` Measurement ID also works). Regenerate after changing it; leave it empty to turn tracking off.
+- The contact form asks **"How did you hear about Danielle?"** (including "ChatGPT or another AI assistant"); the answer is included in the email.
