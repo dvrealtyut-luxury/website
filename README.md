@@ -61,5 +61,5 @@ Hosted on Vercel (config in `vercel.json`: clean URLs such as `/about`, asset ca
 
 - `python3 build/pages.py` also writes **sitemap.xml** and **robots.txt** (all crawlers, including AI assistants, are allowed).
 - Every page includes **structured data** (schema.org `RealEstateAgent`, `Person`, `WebSite`) describing Danielle, her brokerage and the areas she serves. Edit it in `structured_data()` in `build/shared.py`.
-- **Google Analytics 4:** paste the Measurement ID (starts with `G-`) into `GA_MEASUREMENT_ID` in `build/shared.py` and regenerate. Leave it empty to turn tracking off.
+- **Google Analytics 4:** the Google tag ID is set in `GA_MEASUREMENT_ID` in `build/shared.py` (currently `GTM-NFPKPZ6C`; a `G-` Measurement ID also works). Regenerate after changing it; leave it empty to turn tracking off.
 - The contact form asks **"How did you hear about Danielle?"** (including "ChatGPT or another AI assistant"); the answer is included in the email.

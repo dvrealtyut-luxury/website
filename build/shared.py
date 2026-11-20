@@ -5,8 +5,10 @@ KW_SEARCH = "https://daniellevaughns.kw.com"
 CALENDLY = "https://calendly.com/dvrealtyut/30min"
 # Update when the custom domain is connected (used for social share previews)
 SITE_URL = "https://dvrealtyslc.com"
-# Google Analytics 4 Measurement ID (starts with "G-"). Leave empty to turn tracking off.
-GA_MEASUREMENT_ID = ""
+# Google tag ID from Google Analytics (Admin → Data streams → DV Realty website →
+# "View tag instructions"). Either a container ID ("GTM-…") or a Measurement ID ("G-…").
+# Leave empty to turn tracking off.
+GA_MEASUREMENT_ID = "GTM-NFPKPZ6C"
 BROKERAGE = "KW Utah Realtors Keller Williams"
 LUXURY = "KW Utah Realtors Luxury"
 
@@ -216,11 +218,17 @@ def structured_data():
 
 
 def analytics():
-    if not GA_MEASUREMENT_ID:
+    tag = GA_MEASUREMENT_ID
+    if not tag:
         return ""
-    return (f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}"></script>\n'
+    if tag.startswith("GTM-"):
+        # Google tag container, exactly as Google Analytics provides it
+        return (f'<script async src="https://www.googletagmanager.com/gtm.js?id={tag}"></script>\n'
+                "<script>\n  window.dataLayer = window.dataLayer || [];\n"
+                "  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n</script>")
+    return (f'<script async src="https://www.googletagmanager.com/gtag/js?id={tag}"></script>\n'
             "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
-            f"gtag('js',new Date());gtag('config','{GA_MEASUREMENT_ID}');</script>")
+            f"gtag('js',new Date());gtag('config','{tag}');</script>")
 
 
 def canonical_path(filename):
@@ -232,6 +240,7 @@ def page(filename, title, description, body, light_header=False):
     return f"""<!doctype html>
 <html lang="en">
 <head>
+{analytics()}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
@@ -253,7 +262,6 @@ def page(filename, title, description, body, light_header=False):
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css?v={asset_version('assets/css/style.css')}">
 {structured_data()}
-{analytics()}
 </head>
 <body>
 {header(filename, light_header)}
