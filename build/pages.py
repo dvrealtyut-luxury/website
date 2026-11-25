@@ -19,18 +19,18 @@ def img(name, alt, sizes="(max-width: 900px) 100vw, 50vw", eager=False, w=1400, 
 
 
 COMMUNITIES = [
+    ("salt", "Salt Lake City", "Yalecrest · The Avenues · Sugar House",
+     "Historic neighborhoods, a revitalized downtown and Utah's major academic medical centers — with the canyons minutes away."),
     ("park", "Park City", "Old Town · Deer Valley · Kimball Junction",
      "Three major ski areas, world-class mountain biking and a storied Main Street, a short drive up Parley's Canyon."),
-    ("yalecrest", "Yalecrest", "Historic homes · Tree-lined streets",
-     "One of Salt Lake City's most beloved historic neighborhoods, minutes from the University of Utah and downtown."),
-    ("millcreek", "Millcreek & Holladay", "Mature trees · Larger lots",
+    ("millcreek", "Millcreek & Holladay", "Olympus Cove · Holladay Hills · Walker Lane",
      "Established, gracious neighborhoods on Salt Lake's east side, with Millcreek Canyon close by."),
-    ("cottonwoods", "The Cottonwoods & Sandy", "Cottonwood Heights · Sandy",
+    ("cottonwood", "Cottonwood Heights & Sandy", "Pepperwood · Willow Creek",
      "Neighborhoods at the doorstep of Big and Little Cottonwood Canyons and four world-class ski resorts."),
-    ("draper", "Draper & South Jordan", "Corner Canyon · Daybreak",
+    ("draper", "Draper", "Suncrest · Corner Canyon · Draper Heights",
      "Newer homes, top-rated trail systems and an easy commute in either direction along the I-15 corridor."),
-    ("utah-county", "Utah County", "Lehi · Silicon Slopes · Provo",
-     "The heart of Utah's tech corridor — new construction, two major universities and a growing medical community."),
+    ("utah-county", "Utah County", "Lehi · Provo · Silicon Slopes",
+     "The heart of Utah's tech corridor, home to Intermountain Utah Valley Hospital and two major universities."),
 ]
 
 # Featured listings are edited in build/listings.py.
@@ -380,7 +380,7 @@ about = f"""<section class="page-hero">
           <li>Park City &amp; Summit County</li>
           <li>Millcreek &amp; Holladay</li>
           <li>Cottonwood Heights &amp; Sandy</li>
-          <li>Draper &amp; South Jordan</li>
+          <li>Draper</li>
           <li>Utah County</li>
           <li>Physician &amp; jumbo loan guidance</li>
           <li>Luxury rentals &amp; corporate housing</li>
@@ -662,46 +662,48 @@ relocate = f"""<section class="page-hero">
 
 # --------------------------------------------------------------------------- COMMUNITIES
 AREAS = [
-    ("salt", "Salt Lake City", "The Avenues · Sugar House · Federal Heights · East Bench",
-     "Utah's capital pairs historic tree-lined neighborhoods with a growing downtown, a major international airport and the state's largest academic medical campus at the University of Utah — all with mountain canyons just minutes from the city.",
-     [("Lifestyle", "Walkable historic districts, dining, arts and professional sports"),
+    ("salt", "Salt Lake City", "Yalecrest · The Avenues · Sugar House · Federal Heights · East Bench",
+     "Utah's capital pairs historic tree-lined neighborhoods with a growing downtown, a major international airport and the state's largest academic medical campus at the University of Utah. On the east side, Yalecrest is one of the city's most beloved historic neighborhoods, known for streets named for universities like Yale, Harvard and Princeton and character-rich homes from the early twentieth century.",
+     [("Lifestyle", "Walkable historic districts, the shops of 15th &amp; 15th and 9th &amp; 9th, arts and professional sports"),
       ("Outdoors", "Red Butte, City Creek and Emigration canyons close by"),
       ("Good to know", "Close to University of Utah Health, Huntsman Cancer Institute and the VA")]),
-    ("yalecrest", "Yalecrest", "East side Salt Lake City · Historic homes · Tree-lined streets",
-     "One of Salt Lake City's most beloved historic neighborhoods. Yalecrest is known for its tree-lined streets — many named for universities like Yale, Harvard and Princeton — and character-rich bungalows, English cottages and period-revival homes from the early twentieth century.",
-     [("Lifestyle", "Minutes to the shops and dining of 15th &amp; 15th and 9th &amp; 9th"),
-      ("Outdoors", "Neighborhood parks and quick access to the foothill trails"),
-      ("Good to know", "Minutes to the University of Utah and downtown Salt Lake City")]),
     ("park", "Park City &amp; Summit County", "Old Town · Deer Valley · Kimball Junction · Jeremy Ranch",
      "A historic mining town turned world-class mountain resort, and the longtime home of the Sundance Film Festival. Park City offers three major ski areas, including Deer Valley, a lively Main Street and year-round trails, a short drive from Salt Lake via Parley's Canyon.",
      [("Lifestyle", "Main Street dining, galleries and a true four-season mountain town"),
       ("Outdoors", "Three major ski areas and world-class mountain biking on hundreds of miles of trails"),
       ("Good to know", "Roughly 35–45 minutes to Salt Lake City International, depending on traffic")]),
-    ("millcreek", "Millcreek &amp; Holladay", "Millcreek · Holladay · Mature trees · Larger lots",
-     "Gracious, established neighborhoods on Salt Lake's east side. Holladay is known for mature landscaping, larger lots and its village-style center; Millcreek offers a mix of classic and newer homes at the foot of Millcreek Canyon.",
+    ("millcreek", "Millcreek &amp; Holladay", "Olympus Cove · Millcreek Canyon · Holladay Hills · Walker Lane",
+     "Gracious, established neighborhoods on Salt Lake's east side — from Olympus Cove at the foot of Mount Olympus to Holladay Hills and Walker Lane, with Millcreek Canyon minutes away. Expect mature landscaping, larger lots and a mix of classic and newer homes.",
      [("Lifestyle", "Quiet, tree-lined streets, Holladay Village and Millcreek Common"),
       ("Outdoors", "Millcreek Canyon's trails close by, with the Cottonwood canyons a short drive away"),
       ("Good to know", "Convenient to Intermountain Medical Center in Murray")]),
-    ("cottonwoods", "The Cottonwoods &amp; Sandy", "Cottonwood Heights · Sandy · Canyon access",
-     "Neighborhoods at the mouths of Big and Little Cottonwood Canyons, with some of the closest access in the valley to Brighton, Solitude, Alta and Snowbird.",
+    ("cottonwood", "Cottonwood Heights &amp; Sandy", "Pepperwood · Willow Creek",
+     "Neighborhoods at the mouths of Big and Little Cottonwood Canyons, including Sandy's Pepperwood and Willow Creek, with some of the closest access in the valley to Brighton, Solitude, Alta and Snowbird.",
      [("Lifestyle", "Established neighborhoods, larger lots and easy freeway access"),
       ("Outdoors", "Brighton, Solitude, Alta and Snowbird up the Cottonwood canyons"),
       ("Good to know", "An easy commute to downtown Salt Lake City via I-215 and I-15")]),
-    ("draper", "Draper &amp; South Jordan", "Draper · South Jordan · Corner Canyon · Daybreak",
-     "Newer homes, strong amenities and some of the valley's best trail systems, with an easy commute north to Salt Lake or south to Utah County.",
-     [("Lifestyle", "Family-friendly neighborhoods, newer construction and master-planned Daybreak"),
+    ("draper", "Draper", "Suncrest · Corner Canyon · Draper Heights",
+     "Newer homes, strong amenities and some of the valley's best trail systems — from Suncrest high above the valley to the Corner Canyon area — with an easy commute north to Salt Lake or south to Utah County.",
+     [("Lifestyle", "Family-friendly neighborhoods, newer construction and shopping close by"),
       ("Outdoors", "Corner Canyon's trail network and quick access to the Cottonwood canyons"),
       ("Good to know", "Central to both Salt Lake and Utah County employers")]),
     ("utah-county", "Utah County", "Lehi · Silicon Slopes · Provo · Orem",
      "The heart of Utah's tech corridor, known as Silicon Slopes — the community behind the annual Silicon Slopes Summit, which draws innovators from around the world. Lehi and its neighbors offer abundant new construction and a younger community, with BYU and Utah Valley University to the south.",
      [("Lifestyle", "Thanksgiving Point, new town centers and a fast-growing restaurant scene"),
       ("Outdoors", "American Fork Canyon, Utah Lake and Provo Canyon nearby"),
-      ("Good to know", "Intermountain Primary Children's Lehi campus, and BYU's new School of Medicine in Provo opening to its first class in July 2027")]),
+      ("Good to know", "Home to Intermountain Utah Valley Hospital in Provo and Primary Children's Lehi campus, with BYU's new School of Medicine opening to its first class in July 2027")]),
     ("heber", "Heber Valley &amp; Midway", "Midway · Heber City · Jordanelle",
      "Wide pastoral valleys framed by the Wasatch, just over the ridge from Park City.",
      [("Lifestyle", "Small-town pace and open views"),
       ("Outdoors", "Jordanelle and Deer Creek reservoirs"),
       ("Good to know", "About 20 minutes to Park City")]),
+]
+
+# Notable schools, shown in the Schools section of the Communities page.
+SCHOOLS = [
+    ("Salt Lake City", ["Judge Memorial Catholic High School"]),
+    ("Cottonwood Heights &amp; Sandy", ["The Waterford School"]),
+    ("Draper", ["Juan Diego Catholic High School", "Corner Canyon High School"]),
 ]
 
 areas = "\n".join(f"""    <article class="area" id="{aid}">
@@ -717,6 +719,11 @@ areas = "\n".join(f"""    <article class="area" id="{aid}">
       </div>
     </article>""" for i, (aid, name, tags, desc, facts) in enumerate(AREAS))
 
+school_cards = "\n".join(f"""      <div class="svc-card reveal reveal-d{i % 3}">
+        <span class="area__num">{area}</span>
+        <ul class="school-list">{"".join(f"<li>{x}</li>" for x in names)}</ul>
+      </div>""" for i, (area, names) in enumerate(SCHOOLS))
+
 communities = f"""<section class="page-hero">
   <div class="page-hero__glow"></div>
   <div class="wrap">
@@ -726,6 +733,7 @@ communities = f"""<section class="page-hero">
       <span class="line-reveal"><span><em>sought-after communities.</em></span></span>
     </h1>
     <p class="lede fade-up">An insider's introduction to the places Danielle's clients call home — the lifestyle, the commute and what makes each one special.</p>
+    <div class="btn-row fade-up" style="margin-top:40px"><a class="btn btn--ghost-light" href="#schools">Explore Schools</a></div>
   </div>
   {RIDGE.format(cls="page-hero__ridge")}
 </section>
@@ -736,7 +744,22 @@ communities = f"""<section class="page-hero">
   </div>
 </section>
 
-<section class="section section--sand">
+<section class="section section--sand" id="schools">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        <span class="eyebrow reveal">Schools</span>
+        <h2 class="h2 reveal reveal-d1">Notable <em>schools.</em></h2>
+      </div>
+      <p class="lede reveal reveal-d2">A few of the notable schools near Danielle's communities. Ask Danielle for help researching schools in any area you're considering.</p>
+    </div>
+    <div class="svc-grid">
+{school_cards}
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap">
     <figure class="quote reveal">
       <span class="quote__mark" aria-hidden="true">“</span>
@@ -757,7 +780,7 @@ listings = f"""<section class="page-hero">
       <span class="line-reveal"><span>Find your</span></span>
       <span class="line-reveal"><span><em>Utah home.</em></span></span>
     </h1>
-    <p class="lede fade-up">Handpicked properties across Northern Utah's most sought-after communities — from Yalecrest to Park City, the Cottonwoods to Utah County.</p>
+    <p class="lede fade-up">Handpicked properties across Northern Utah's most sought-after communities — from Salt Lake City to Park City, Cottonwood Heights to Utah County.</p>
     <div class="btn-row fade-up" style="margin-top:40px">
       <a class="btn btn--gold" href="{KW_SEARCH}" target="_blank" rel="noopener">Search All Utah Homes {ARROW}</a>
     </div>
@@ -916,7 +939,7 @@ PAGES = [
     ("relocate.html", "Relocate to Utah | DV Realty",
      "A calm, expert-led move to Utah from first call to keys, with support for physicians and executives, plus luxury rentals and corporate housing.", relocate),
     ("communities.html", "Utah Communities | DV Realty",
-     "An insider's guide to Salt Lake City, Yalecrest, Park City, Millcreek, Holladay, Cottonwood Heights, Sandy, Draper, South Jordan and Utah County.", communities),
+     "An insider's guide to Salt Lake City, Park City, Millcreek, Holladay, Cottonwood Heights, Sandy, Draper and Utah County, plus notable schools.", communities),
     ("listings.html", "Utah Homes for Sale | DV Realty",
      "Curated Utah home searches and off-market access with Danielle Vaughns, Utah relocation specialist.", listings),
     ("contact.html", "Contact & Schedule a Call | DV Realty",

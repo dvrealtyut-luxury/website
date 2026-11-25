@@ -163,8 +163,8 @@ def footer():
 </footer>"""
 
 
-AREAS_SERVED = ["Salt Lake City", "Yalecrest", "Park City", "Millcreek", "Holladay",
-                "Cottonwood Heights", "Sandy", "Draper", "South Jordan", "Utah County"]
+AREAS_SERVED = ["Salt Lake City", "Park City", "Millcreek", "Holladay",
+                "Cottonwood Heights", "Sandy", "Draper", "Utah County"]
 
 
 def structured_data():
