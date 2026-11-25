@@ -38,7 +38,7 @@ python3 build/pages.py
 ## Before going live — checklist
 
 - [x] **Phone number** — (801) 678-0444.
-- [x] **Email** — dvrealtyut@gmail.com.
+- [x] **Email** — danielle@dvrealtyslc.com.
 - [x] **Brokerage name** — KW Utah Realtors Keller Williams (footer and contact page).
 - [ ] **Contact form** — by default it opens the visitor's email app. To receive submissions directly, create a free form at a service such as Formspree and add `data-endpoint="https://formspree.io/f/XXXX"` to the `<form>` in `contact.html`.
 - [ ] **Social links** — add real profile URLs (none are included yet).

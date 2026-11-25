@@ -1,6 +1,6 @@
 PHONE = "(801) 678-0444"
 PHONE_TEL = "+18016780444"
-EMAIL = "dvrealtyut@gmail.com"
+EMAIL = "danielle@dvrealtyslc.com"
 KW_SEARCH = "https://daniellevaughns.kw.com"
 CALENDLY = "https://calendly.com/dvrealtyut/30min"
 # Update when the custom domain is connected (used for social share previews)
